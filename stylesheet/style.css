@@ -21,3 +21,16 @@ h2 {
 .container {
   margin-left: 5px;
 }
+
+.table {
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
