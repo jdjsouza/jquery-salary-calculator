@@ -1,5 +1,3 @@
-console.log('JS Loaded');
-
 $(document).ready(onReady);
 
 function onReady() {

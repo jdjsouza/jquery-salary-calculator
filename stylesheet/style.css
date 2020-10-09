@@ -3,9 +3,21 @@ body {
   margin: 0;
 }
 
+h2 {
+  margin-left: 5px;
+}
+
 .appBar {
   padding: 15px 25px;
   background-color: lightgray;
   color: slategrey;
   text-align: center;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.container {
+  margin-left: 5px;
 }
