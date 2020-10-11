@@ -4,18 +4,16 @@ let salaryTotal = 0;
 let monthlyTotal = 0;
 
 function onReady() {
-  console.log('JQuery is Loaded');
-
   $('.js-click-submit').on('click', submitEmployee);
   $('.js-table').on('click', '.js-click-delete', deleteEmployee);
 }
 
 function submitEmployee() {
-  const firstName = $('.js-field-first-name').val();
-  const lastName = $('.js-field-last-name').val();
-  const id = $('.js-field-id').val();
-  const title = $('.js-field-title').val();
-  const salary = $('.js-field-salary').val();
+  const firstName = $.trim('.js-field-first-name').val();
+  const lastName = $.trim('.js-field-last-name').val();
+  const id = $.trim('.js-field-id').val();
+  const title = $.trim('.js-field-title').val();
+  const salary = $.trim('.js-field-salary').val();
   const employee = {
     firstName,
     lastName,
@@ -23,7 +21,7 @@ function submitEmployee() {
     title,
     salary,
   };
-  // $('.inputBox').val('');
+  $('.inputBox').val('');
   salaryTotal += Number(salary);
   employeeList.push(employee);
   output();
