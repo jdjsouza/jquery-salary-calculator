@@ -33,7 +33,7 @@ function output() {
   $('.js-employee-list').empty();
   for (let i = 0; i < employeeList.length; i++) {
     let salary = Number(employeeList[i].salary);
-    let currency = salary.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,'); // 12,345.67;
+    let currency = salary.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,'); // convert the salary to a currency
     $('.js-employee-list').append(
       `<tr><td>${employeeList[i].firstName}</td>
       <td>${employeeList[i].lastName}</td>
