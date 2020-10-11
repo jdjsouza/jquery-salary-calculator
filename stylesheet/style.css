@@ -22,6 +22,10 @@ h2 {
   margin-left: 5px;
 }
 
+.inputBox {
+  margin-top: 10px;
+}
+
 .table {
   border-collapse: collapse;
 }
@@ -33,4 +37,9 @@ h2 {
 
 .table tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.totalContainer {
+  width: 300px;
+  margin-left: 50px;
 }
