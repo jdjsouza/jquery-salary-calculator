@@ -9,11 +9,11 @@ function onReady() {
 }
 
 function submitEmployee() {
-  const firstName = $.trim('.js-field-first-name').val();
-  const lastName = $.trim('.js-field-last-name').val();
-  const id = $.trim('.js-field-id').val();
-  const title = $.trim('.js-field-title').val();
-  const salary = $.trim('.js-field-salary').val();
+  const firstName = $('.js-field-first-name').val();
+  const lastName = $('.js-field-last-name').val();
+  const id = $('.js-field-id').val();
+  const title = $('.js-field-title').val();
+  const salary = $('.js-field-salary').val();
   const employee = {
     firstName,
     lastName,
