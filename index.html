@@ -14,23 +14,11 @@
     </header>
     <h2>Add Employee</h2>
     <div class="container">
-      <input
-        class="inputBox js-field-first-name"
-        type="text"
-        placeholder="First Name"
-      />
-      <input
-        class="inputBox js-field-last-name"
-        type="text"
-        placeholder="Last Name"
-      />
+      <input class="inputBox js-field-first-name" type="text" placeholder="First Name" />
+      <input class="inputBox js-field-last-name" type="text" placeholder="Last Name" />
       <input class="inputBox js-field-id" type="text" placeholder="ID" />
       <input class="inputBox js-field-title" type="text" placeholder="Title" />
-      <input
-        class="inputBox js-field-salary"
-        type="text"
-        placeholder="Annual Salary"
-      />
+      <input class="inputBox js-field-salary" type="text" placeholder="Annual Salary" />
       <br />
       <button class="btn js-click-submit">Submit</button>
     </div>
@@ -53,14 +41,16 @@
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="6"></td>
+            <td class="totalContainer js-total-container" colspan="6">
+              <h3>Total Monthly: <span class="js-total-monthly">$</span></h3>
+            </td>
           </tr>
         </tfoot>
       </table>
     </div>
 
-    <div class="totalContainer js-total-container">
-      <h2>Total Monthly: <span class="js-total-monthly">$</span></h2>
-    </div>
+    <!-- <div class="totalContainer js-total-container">
+      <h3>Total Monthly: <span class="js-total-monthly">$</span></h3>
+    </div> -->
   </body>
 </html>

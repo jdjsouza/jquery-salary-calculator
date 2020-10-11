@@ -7,6 +7,10 @@ h2 {
   margin-left: 5px;
 }
 
+h3 {
+  margin: 10px;
+}
+
 .appBar {
   padding: 15px 25px;
   background-color: lightgray;
@@ -28,6 +32,7 @@ h2 {
 
 .table {
   border-collapse: collapse;
+  empty-cells: show;
 }
 
 .table td {
@@ -40,6 +45,5 @@ h2 {
 }
 
 .totalContainer {
-  width: 300px;
-  margin-left: 50px;
+  text-align: center;
 }

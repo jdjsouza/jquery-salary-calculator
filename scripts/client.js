@@ -1,12 +1,13 @@
 $(document).ready(onReady);
 const employeeList = [];
+let salaryTotal = 0;
 let monthlyTotal = 0;
 
 function onReady() {
   console.log('JQuery is Loaded');
 
   $('.js-click-submit').on('click', submitEmployee);
-  $('.js-table').on('click', 'js-click-delete', deleteEmployee);
+  $('.js-table').on('click', '.js-click-delete', deleteEmployee);
 }
 
 function submitEmployee() {
@@ -22,6 +23,8 @@ function submitEmployee() {
     title,
     salary,
   };
+  $('.inputBox').val('');
+  salaryTotal += Number(salary);
   employeeList.push(employee);
   output();
 }
@@ -39,28 +42,25 @@ function output() {
       <td>$${currency}</td>
       <td><button class="btn js-click-delete" data-index="${i}">Delete</button></td></tr>`
     );
-    monthlyTotal += salary;
   }
   outputMonthlyTotal();
 }
 
 function outputMonthlyTotal() {
-  monthlyTotal = monthlyTotal / 12;
+  monthlyTotal = salaryTotal / 12;
   if (monthlyTotal > 20000) {
     $('.js-total-container').css('background-color', 'red');
+  } else {
+    $('.js-total-container').css('background-color', '');
   }
-
   currency = monthlyTotal.toFixed(2).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
   $('.js-total-monthly').text('$' + currency);
 }
 
 function deleteEmployee() {
-  console.log('in deleteEmployee');
   const index = $(this).data('index');
   if (index > -1) {
-    let removeSalary = employeeList[index].salary;
-    removeSalary = removeSalary / 12;
-    monthlyTotal -= removeSalary;
+    salaryTotal -= Number(employeeList[index].salary);
     employeeList.splice(index, 1);
   }
   $(this).closest('tr').remove();
