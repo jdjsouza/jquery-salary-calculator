@@ -23,7 +23,7 @@ function submitEmployee() {
     title,
     salary,
   };
-  $('.inputBox').val('');
+  // $('.inputBox').val('');
   salaryTotal += Number(salary);
   employeeList.push(employee);
   output();
@@ -53,7 +53,7 @@ function outputMonthlyTotal() {
   } else {
     $('.js-total-container').css('background-color', '');
   }
-  currency = monthlyTotal.toFixed(2).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  let currency = monthlyTotal.toFixed(2).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
   $('.js-total-monthly').text('$' + currency);
 }
 
@@ -63,7 +63,5 @@ function deleteEmployee() {
     salaryTotal -= Number(employeeList[index].salary);
     employeeList.splice(index, 1);
   }
-  $(this).closest('tr').remove();
-
-  outputMonthlyTotal();
+  output();
 }
