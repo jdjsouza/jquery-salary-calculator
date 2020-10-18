@@ -29,6 +29,7 @@ function submitEmployee() {
 
 function output() {
   $('.js-employee-list').empty();
+  console.log(employeeList);
   for (let i = 0; i < employeeList.length; i++) {
     let salary = Number(employeeList[i].salary);
     let currency = salary.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,'); // convert the salary to a currency
